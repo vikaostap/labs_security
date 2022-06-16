@@ -1,0 +1,307 @@
+PS C:\tools\hashcat-6.2.5> .\hashcat.exe --attack-mode 0 --hash-type 120 --outfile C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\output-3rdParty-strongHashes.txt C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt
+hashcat (v6.2.5) starting
+
+OpenCL API (OpenCL 3.0 WINDOWS) - Platform #1 [Intel(R) Corporation]
+====================================================================
+* Device #1: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 3015/6095 MB (761 MB allocatable), 4MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimim salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashfile 'C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv' on line 1 (hash:salt): Token length exception
+Hashes: 100000 digests; 100000 unique digests, 100000 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Iterated
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+Host memory required for this attack: 0 MB
+
+Dictionary cache hit:
+* Filename..: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt
+* Passwords.: 100000
+* Bytes.....: 881896
+* Keyspace..: 100000
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (10 secs)
+Time.Estimated...: Tue Jun 14 17:33:50 2022 (11 mins, 49 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........: 13914.5 kH/s (0.12ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:N/A,N/A,N/A (Min,Hour,Day)
+Progress.........: 126681088/10000000000 (1.27%)
+Rejected.........: 0/126681088 (0.00%)
+Restore.Point....: 0/100000 (0.00%)
+Restore.Sub.#1...: Salt:61856 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -> ball
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (20 secs)
+Time.Estimated...: Tue Jun 14 17:40:20 2022 (18 mins, 9 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  8965.7 kH/s (0.38ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:N/A,N/A,N/A (Min,Hour,Day)
+Progress.........: 233920512/10000000000 (2.34%)
+Rejected.........: 0/233920512 (0.00%)
+Restore.Point....: 2048/100000 (2.05%)
+Restore.Sub.#1...: Salt:14219 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 262626 -> 12345678q
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (30 secs)
+Time.Estimated...: Tue Jun 14 17:38:52 2022 (16 mins, 31 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9743.4 kH/s (0.17ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:N/A,N/A,N/A (Min,Hour,Day)
+Progress.........: 339169280/10000000000 (3.39%)
+Rejected.........: 0/339169280 (0.00%)
+Restore.Point....: 2048/100000 (2.05%)
+Restore.Sub.#1...: Salt:65610 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 262626 -> 12345678q
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (53 secs)
+Time.Estimated...: Tue Jun 14 17:38:20 2022 (15 mins, 36 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........: 10097.1 kH/s (0.15ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:N/A,N/A,N/A (Min,Hour,Day)
+Progress.........: 544266240/10000000000 (5.44%)
+Rejected.........: 0/544266240 (0.00%)
+Restore.Point....: 4096/100000 (4.10%)
+Restore.Sub.#1...: Salt:65755 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 0123 -> 786786
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (2 mins, 46 secs)
+Time.Estimated...: Tue Jun 14 17:40:01 2022 (15 mins, 24 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9067.0 kH/s (0.18ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 1619566592/10000000000 (16.20%)
+Rejected.........: 0/1619566592 (0.00%)
+Restore.Point....: 14336/100000 (14.34%)
+Restore.Sub.#1...: Salt:90804 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 07101990 -> wooden
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (6 mins, 47 secs)
+Time.Estimated...: Tue Jun 14 17:38:25 2022 (9 mins, 47 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........: 10639.1 kH/s (0.15ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 3748988928/10000000000 (37.49%)
+Rejected.........: 0/3748988928 (0.00%)
+Restore.Point....: 36864/100000 (36.86%)
+Restore.Sub.#1...: Salt:30561 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: salt55 -> reba
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (15 mins, 17 secs)
+Time.Estimated...: Tue Jun 14 17:39:20 2022 (2 mins, 12 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9266.1 kH/s (0.18ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 8770236416/10000000000 (87.70%)
+Rejected.........: 0/8770236416 (0.00%)
+Restore.Point....: 86016/100000 (86.02%)
+Restore.Sub.#1...: Salt:82342 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: DEEDEE -> 27111966
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (16 mins, 41 secs)
+Time.Estimated...: Tue Jun 14 17:39:10 2022 (38 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........: 10613.3 kH/s (0.15ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 9587458048/10000000000 (95.87%)
+Rejected.........: 0/9587458048 (0.00%)
+Restore.Point....: 94208/100000 (94.21%)
+Restore.Sub.#1...: Salt:81376 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: i740nt5 -> bobthedo
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (17 mins, 0 secs)
+Time.Estimated...: Tue Jun 14 17:39:20 2022 (29 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  8366.3 kH/s (0.20ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 9751814144/10000000000 (97.52%)
+Rejected.........: 0/9751814144 (0.00%)
+Restore.Point....: 96256/100000 (96.26%)
+Restore.Sub.#1...: Salt:61628 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: bobolina -> 231158
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (17 mins, 4 secs)
+Time.Estimated...: Tue Jun 14 17:39:17 2022 (22 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9388.6 kH/s (0.17ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 9785698304/10000000000 (97.86%)
+Rejected.........: 0/9785698304 (0.00%)
+Restore.Point....: 96256/100000 (96.26%)
+Restore.Sub.#1...: Salt:78173 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: bobolina -> 231158
+
+Approaching final keyspace - workload adjusted.
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+
+Session..........: hashcat
+Status...........: Running
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (17 mins, 18 secs)
+Time.Estimated...: Tue Jun 14 17:39:18 2022 (9 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9148.1 kH/s (0.15ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 9913676992/10000000000 (99.14%)
+Rejected.........: 0/9913676992 (0.00%)
+Restore.Point....: 98304/100000 (98.30%)
+Restore.Sub.#1...: Salt:49102 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 23112007 -> 070162
+
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Mode........: 120 (sha1($salt.$pass))
+Hash.Target......: C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv
+Time.Started.....: Tue Jun 14 17:21:51 2022 (17 mins, 27 secs)
+Time.Estimated...: Tue Jun 14 17:39:18 2022 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  9060.3 kH/s (0.14ms) @ Accel:512 Loops:1 Thr:1 Vec:16
+Recovered........: 0/100000 (0.00%) Digests, 0/100000 (0.00%) Salts
+Remaining........: 100000 (100.00%) Digests, 100000 (100.00%) Salts
+Recovered/Time...: CUR:0,N/A,N/A AVG:0.00,N/A,N/A (Min,Hour,Day)
+Progress.........: 10000000000/10000000000 (100.00%)
+Rejected.........: 0/10000000000 (0.00%)
+Restore.Point....: 100000/100000 (100.00%)
+Restore.Sub.#1...: Salt:99999 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 23112007 -> 070162
+
+Started: Tue Jun 14 17:21:49 2022
+Stopped: Tue Jun 14 17:39:20 2022
+PS C:\tools\hashcat-6.2.5>

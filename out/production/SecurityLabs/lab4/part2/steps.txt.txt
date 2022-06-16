@@ -1,0 +1,52 @@
+1. Install hashcat from https://hashcat.net/hashcat/
+2. Install "OpenCL Runtime for Intel" from https://www.intel.com/content/www/us/en/developer/tools/opencl-cpu-runtime/overview.html
+
+3. Відкрий PowerShell і перейди у папку, куди був встановленй hashcat.
+У моєму випадку це "C:\tools\hashcat-6.2.5"
+4. Запусти hashcat для отримання help інформації (PS C:\tools\hashcat-6.2.5> .\hashcat.exe --help)
+Із help:
+
+--attack-mode
+
+    - [ Attack Modes ] -
+
+      # | Mode
+     ===+======
+      0 | Straight
+      1 | Combination
+      3 | Brute-force
+      6 | Hybrid Wordlist + Mask
+      7 | Hybrid Mask + Wordlist
+      9 | Association
+
+
+--hash-type 
+
+    - [ Hash modes ] -
+
+          # | Name                                                | Category
+      ======+=====================================================+======================================
+          0 | MD5                                                 | Raw Hash
+        100 | SHA1                                                | Raw Hash
+        110 | sha1($pass.$salt)                                   | Raw Hash salted and/or iterated
+        120 | sha1($salt.$pass)                                   | Raw Hash salted and/or iterated
+
+
+ --outfile
+
+5. Спробуємо зламати weak hashes. Допустимо, що паролі були захешовані за допомогою MD5. Тоді використаємо hashcat
+
+PS C:\tools\hashcat-6.2.5> .\hashcat.exe --attack-mode 0 --hash-type 0 --outfile C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\output-3rdParty-weakHashes.txt C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-weakHashes.csv C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt
+
+Час виконання: 15 секунд
+Процес виконання команди: дивись cmd-3rdPatry-weakHashes.txt
+Результат роботи: дивись output-3rdParty-weakHashes.txt
+
+6. Спробуємо зламати strong hashes. Допустимо, що паролі були захешовані за допомогою SHA1 + salt. Тоді використаємо hashcat
+
+PS C:\tools\hashcat-6.2.5> .\hashcat.exe --attack-mode 0 --hash-type 120 --outfile C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\output-3rdParty-strongHashes.txt C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\part2\3rdParty-strongHashes.csv C:\Users\User\IdeaProjects\SecurityLabs\src\lab4\top100kPasswords.txt
+
+Час виконання: ~20 хвилин
+Процес виконання команди: дивись cmd-3rdPatry-strongHashes.txt
+Результат: не вдалося відновити жодного паролю
+
